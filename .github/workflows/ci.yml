@@ -1,0 +1,11 @@
+name: CI  # This is your workflow name - use it later!
+
+on: [push, pull_request, workflow_dispatch]  # Runs on code push, PRs, or manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Free GitHub server
+    steps:
+      - uses: actions/checkout@v4  # Grabs your code
+      - name: Run a test  # Simple step that always passes
+        run: echo "Tests passed!"  # Replace with real tests later
